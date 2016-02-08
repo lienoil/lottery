@@ -1,0 +1,507 @@
+/*
+| -----------------------------
+| # Stylesheet for Lottery
+| -----------------------------
+| @version 0.0.1
+| @author John Lioneil Dionisio
+|
+*/
+
+/*
+| -------
+| # Fonts
+| -------
+*/
+@import "vendors/lato/css/lato.min.css";
+
+/*
+| ------
+| # Body
+| ------
+*/
+html {
+    font-size: 16px;
+}
+body {
+    font-family: 'Lato', Helvetica, sans-serif;
+    font-size: 100%;
+}
+body > footer {
+    padding: 2rem;
+}
+/*
+| ---------------------
+| # Bootstrap Overrides
+| ---------------------
+*/
+.card {
+  position: relative;
+  display: block;
+  margin-bottom: .75rem;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: .25rem;
+}
+
+.card-block {
+  padding: 1.25rem;
+}
+
+.card-title {
+  margin-bottom: .75rem;
+}
+
+.card-subtitle {
+  margin-top: -.375rem;
+  margin-bottom: 0;
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+}
+
+.card-link:hover {
+  text-decoration: none;
+}
+
+.card-link + .card-link {
+  margin-left: 1.25rem;
+}
+
+.card > .list-group:first-child .list-group-item:first-child {
+  border-radius: .25rem .25rem 0 0;
+}
+
+.card > .list-group:last-child .list-group-item:last-child {
+  border-radius: 0 0 .25rem .25rem;
+}
+
+.card-header {
+  padding: .75rem 1.25rem;
+  background: -webkit-linear-gradient(bottom, #fca91c, #f29802);
+    background: -o-linear-gradient(bottom, #fca91c, #f29802);
+    background: linear-gradient(bottom, #fca91c, #f29802);
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.card-header:first-child {
+  border-radius: .25rem .25rem 0 0;
+}
+
+.card-footer {
+  padding: .75rem 1.25rem;
+  background-color: #f5f5f5;
+  border-top: 1px solid #e5e5e5;
+}
+
+.card-footer:last-child {
+  border-radius: 0 0 .25rem .25rem;
+}
+
+.card-primary {
+  background-color: #0275d8;
+  border-color: #0275d8;
+}
+
+.card-success {
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+
+.card-info {
+  background-color: #5bc0de;
+  border-color: #5bc0de;
+}
+
+.card-warning {
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+}
+
+.card-danger {
+  background-color: #d9534f;
+  border-color: #d9534f;
+}
+
+.card-primary-outline {
+  background-color: transparent;
+  border-color: #0275d8;
+}
+
+.card-secondary-outline {
+  background-color: transparent;
+  border-color: #ccc;
+}
+
+.card-info-outline {
+  background-color: transparent;
+  border-color: #5bc0de;
+}
+
+.card-success-outline {
+  background-color: transparent;
+  border-color: #5cb85c;
+}
+
+.card-warning-outline {
+  background-color: transparent;
+  border-color: #f0ad4e;
+}
+
+.card-danger-outline {
+  background-color: transparent;
+  border-color: #d9534f;
+}
+
+.card-inverse .card-header,
+.card-inverse .card-footer {
+  border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+.card-inverse .card-header,
+.card-inverse .card-footer,
+.card-inverse .card-title,
+.card-inverse .card-blockquote {
+  color: #fff;
+}
+
+.card-inverse .card-link,
+.card-inverse .card-text,
+.card-inverse .card-blockquote > footer {
+  color: rgba(255, 255, 255, .65);
+}
+
+.card-inverse .card-link:focus, .card-inverse .card-link:hover {
+  color: #fff;
+}
+
+.card-blockquote {
+  padding: 0;
+  margin-bottom: 0;
+  border-left: 0;
+}
+
+.card-img {
+  border-radius: .25rem;
+}
+
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1.25rem;
+}
+
+.card-img-top {
+  border-radius: .25rem .25rem 0 0;
+}
+
+.card-img-bottom {
+  border-radius: 0 0 .25rem .25rem;
+}
+
+@media (min-width: 544px) {
+  .card-deck {
+    display: table;
+    table-layout: fixed;
+    border-spacing: 1.25rem 0;
+  }
+  .card-deck .card {
+    display: table-cell;
+    width: 1%;
+    vertical-align: top;
+  }
+  .card-deck-wrapper {
+    margin-right: -1.25rem;
+    margin-left: -1.25rem;
+  }
+}
+
+@media (min-width: 544px) {
+  .card-group {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+  .card-group .card {
+    display: table-cell;
+    vertical-align: top;
+  }
+  .card-group .card + .card {
+    margin-left: 0;
+    border-left: 0;
+  }
+  .card-group .card:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .card-group .card:first-child .card-img-top {
+    border-top-right-radius: 0;
+  }
+  .card-group .card:first-child .card-img-bottom {
+    border-bottom-right-radius: 0;
+  }
+  .card-group .card:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .card-group .card:last-child .card-img-top {
+    border-top-left-radius: 0;
+  }
+  .card-group .card:last-child .card-img-bottom {
+    border-bottom-left-radius: 0;
+  }
+  .card-group .card:not(:first-child):not(:last-child) {
+    border-radius: 0;
+  }
+  .card-group .card:not(:first-child):not(:last-child) .card-img-top,
+  .card-group .card:not(:first-child):not(:last-child) .card-img-bottom {
+    border-radius: 0;
+  }
+}
+
+@media (min-width: 544px) {
+  .card-columns {
+    -webkit-column-count: 3;
+       -moz-column-count: 3;
+            column-count: 3;
+    -webkit-column-gap: 1.25rem;
+       -moz-column-gap: 1.25rem;
+            column-gap: 1.25rem;
+  }
+  .card-columns .card {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+.card .list-group-item {
+    border-left: none;
+    border-right: none;
+}
+/*
+| --------------
+| # Navbar Brand
+| --------------
+*/
+.navbar-brand {
+    /*float: none;*/
+    padding: 15px;
+}
+/*
+| ------------
+| # Navigation
+| ------------
+*/
+.affix {
+    width: 100%;
+    z-index: 999999;
+}
+.navbar {
+    margin-bottom: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.navbar-nav li {
+    border-left: 1px solid rgba(255,255,255,0.1);
+}
+.navbar-nav li:last-child {
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+.winning-combo-nav li {
+    margin: 5px;
+}
+@media only screen and (min-width: 768px) {
+    .navbar-nav>li>a {
+        padding: 30px 20px;
+    }
+}
+/*
+| -----------
+| # Jumbotron
+| -----------
+*/
+body > .jumbotron {
+    min-height: 100vh;
+    max-height: 768px;
+    padding: 0;
+    border: none;
+    margin-bottom: 0px;
+}
+.jumbotron {
+    position: relative;
+}
+.jumbotron-primary {
+    background-color: #31b29e;
+}
+.jumbotron-primary h2,
+.jumbotron-primary h1 {
+    margin: 0;
+}
+.jumbotron-primary,
+.jumbotron-primary *:not([class*="text-"]) {
+    color: #ffffff;
+}
+.jumbotron-img {
+    max-width: 100%;
+    height: auto;
+}
+.jumbotron .container {
+    position: relative;
+}
+.jumbotron-img-overlay {
+    position: absolute;
+    top: 50px;
+    right: 0;
+}
+
+/*
+| -------
+| # Badge
+| -------
+*/
+.badge-default {
+    background-color: #e3304e;
+}
+.badge-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 13px 5px;
+    font-family: 'Lato Black', 'Lato', Helvetica, sans-serif;
+    font-weight: 800;
+}
+
+/*
+| --------
+| # Banner
+| --------
+*/
+.banner.winning-combo {
+    padding: 1em 0;
+}
+.banner.winning-combo .winning-combo-nav {
+    display: table;
+    margin: 0 auto;
+    float: none;
+}
+
+/*
+| ----------------
+| # Call to action
+| ----------------
+*/
+.call-to-action-section {
+    background-color: #4a4a4a;
+}
+.call-to-action-group {
+    font-weight: bold;
+    position: relative;
+}
+.call-to-action-group:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0;
+    display: block;
+    float: right;
+    width: 0;
+    height: 0;
+    border: 22px solid transparent;
+    border-right: 0px solid transparent;
+    border-left: 22px solid #015f51;
+}
+.call-to-action-group a {
+    display: block;
+    padding-right: 30px;
+}
+.call-to-action-group a:hover,
+.call-to-action-group a:focus,
+.call-to-action-group a:active {
+    color: #015f51;
+}
+.call-to-action-section p {
+    text-transform: uppercase;
+}
+.call-to-action-section h3 > span {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: normal;
+}
+.call-to-action-section .navbar-nav {
+    float: none;
+    display: table;
+    margin: 0 auto;
+}
+.call-to-action-section .card {
+    margin: 2em auto;
+    border-bottom: 5px solid #e3304e;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.call-to-action-section .card:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    border: 30px solid transparent;
+    border-top: 0px solid transparent;
+    border-bottom: 30px solid #e3304e;
+}
+.call-to-action-section .card.active,
+.call-to-action-section .card:hover {
+    background-color: #e3304e;
+}
+.call-to-action-section .card.active .badge-default,
+.call-to-action-section .card:hover .badge-default {
+    background-color: #4a4a4a;
+}
+
+/*
+| ----------------
+| # Card Overrides
+| ----------------
+*/
+.card-transparent {
+    background-color: transparent;
+    border: none;
+}
+.card-inverse {
+    color: #ffffff;
+}
+
+/*
+| --------
+| # Footer
+| --------
+*/
+.footer-brand,
+.footer-brand + .copyright {
+    display: inline-block;
+    padding: 0 2em;
+}
+.footer-brand + .copyright {
+    border-left: 1px solid rgba(0,0,0,0.4);
+}
+
+body > footer .social-nav {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+    text-align: right;
+}
+body > footer .social-nav >li>a {
+    padding: 5px;
+    color: #000000;
+}
+body > footer .social-nav >li>a:hover,
+body > footer .social-nav >li.active>a,
+body > footer .social-nav >li>a:focus,
+body > footer .social-nav >li>a:active {
+    color: #e3304e;
+}
