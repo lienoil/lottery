@@ -349,6 +349,7 @@ body > .jumbotron {
     padding: 0;
     border: none;
     margin-bottom: 0px;
+    overflow: hidden;
 }
 .jumbotron {
     position: relative;
