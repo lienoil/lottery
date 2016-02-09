@@ -325,8 +325,8 @@ body > footer {
 | -----------
 */
 body > .jumbotron {
-    min-height: 100vh;
-    max-height: 768px;
+    height: 100vh;
+    max-height: 674px;
     padding: 0;
     border: none;
     margin-bottom: 0px;
@@ -421,7 +421,8 @@ body > .jumbotron {
 .call-to-action-group a:hover,
 .call-to-action-group a:focus,
 .call-to-action-group a:active {
-    color: #015f51;
+    text-decoration: none;
+    color: #018370;
 }
 .call-to-action-section p {
     text-transform: uppercase;
